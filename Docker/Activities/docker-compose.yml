@@ -1,0 +1,9 @@
+services:
+    redis-server:
+        image: 'redis'
+        command: ["redis-server", "--protected-mode", "no"]
+    node-app:
+        build: ./
+        image: docker.io/renu277/visitsyml
+        ports:
+            - "8081:8081"
