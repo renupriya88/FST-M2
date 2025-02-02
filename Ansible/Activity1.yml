@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes # Become admin when performin tasks? answer is given here
+  tasks:
+      - name:  Create a user
+        user: 
+            name: testuser
+            groups: wheel
+            append: true
